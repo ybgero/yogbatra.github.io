@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #020617;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-[#0F172A]/60 backdrop-blur-md border border-white/10;
+  }
+  
+  .glass-card {
+    @apply glass hover:bg-[#0F172A]/80 transition-all duration-300 rounded-2xl;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#7C3AED] via-[#3B82F6] to-[#06B6D4];
+  }
+}
